@@ -21,7 +21,7 @@ parser.add_argument('--files-to-process', nargs='+', default=['test.tsv', 'dev.t
 args = parser.parse_args()
 VERSION = 'cv-corpus-5.1-2020-06-22'
 COMMON_VOICE_URL = "https://voice-prod-bundler-ee1969a6ce8178826482b88e843c335139bd3fb4.s3.amazonaws.com/" \
-                   "{}/en.tar.gz".format(VERSION)
+                   "{}/fr.tar.gz".format(VERSION)
 
 
 def convert_to_wav(csv_file, target_dir, num_workers):

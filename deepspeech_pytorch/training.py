@@ -29,7 +29,7 @@ def train(cfg: DeepSpeechConfig):
             resume_from_checkpoint = checkpoint_callback.find_latest_checkpoint()
             if resume_from_checkpoint:
                 cfg.trainer.resume_from_checkpoint = resume_from_checkpoint
-
+    print(cfg.trainer.gpus)
     data_loader = DeepSpeechDataModule(
         labels=labels,
         data_cfg=cfg.data,
